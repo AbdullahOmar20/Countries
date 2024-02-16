@@ -1,0 +1,11 @@
+C:\Projects\Entites\bin\Debug\net8.0\Entites.deps.json
+C:\Projects\Entites\bin\Debug\net8.0\Entites.dll
+C:\Projects\Entites\bin\Debug\net8.0\Entites.pdb
+C:\Projects\Entites\obj\Debug\net8.0\Entites.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Entites\obj\Debug\net8.0\Entites.AssemblyInfoInputs.cache
+C:\Projects\Entites\obj\Debug\net8.0\Entites.AssemblyInfo.cs
+C:\Projects\Entites\obj\Debug\net8.0\Entites.csproj.CoreCompileInputs.cache
+C:\Projects\Entites\obj\Debug\net8.0\Entites.dll
+C:\Projects\Entites\obj\Debug\net8.0\refint\Entites.dll
+C:\Projects\Entites\obj\Debug\net8.0\Entites.pdb
+C:\Projects\Entites\obj\Debug\net8.0\ref\Entites.dll
