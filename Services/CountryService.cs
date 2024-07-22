@@ -7,10 +7,10 @@ namespace Services
 {
     public class CountryService : ICountryService
     {
-        private readonly List<Country> _countries;
-        public CountryService()
+        private readonly CountriesDbContext _context;
+        public CountryService(CountriesDbContext context)
         {
-            _countries = new List<Country>();
+            _context = context;
         }
         public CountryResponse Addcountry(CountryAddRequest? countryAddrequest)
         {
@@ -21,26 +21,28 @@ namespace Services
             if(countryAddrequest.CountryName == null)
                 throw new ArgumentException(nameof(countryAddrequest.CountryName));
             //validation if country name is duplicated 
-            if(_countries.Where(c => c.Name ==  countryAddrequest.CountryName).Count()>0)
+            if(_context.Countries.Where(c => c.Name ==  countryAddrequest.CountryName).Count()>0)
             {
                 throw new ArgumentException("the given name is already exists");
             }
 
             Country country = countryAddrequest.ToCountry();
             country.Id = Guid.NewGuid();
-            _countries.Add(country);
+            _context.Countries.Add(country);
             return country.ToCountryResponse();
         }
 
         public List<CountryResponse> GetAllCountries()
         {
-            return _countries.Select(c => c.ToCountryResponse()).ToList();
+            var countries = _context.Countries.ToList().Select(o=>o.ToCountryResponse());
+            return countries.ToList();
+           
         }
 
         public CountryResponse GetCountryById(Guid? id)
         {
             if (id == null) return null;
-            Country? response =  _countries.FirstOrDefault(c=>c.Id == id);
+            Country? response =  _context.Countries.FirstOrDefault(c=>c.Id == id);
             if (response == null)
                 return null;
             return response.ToCountryResponse();

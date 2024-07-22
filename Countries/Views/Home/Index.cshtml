@@ -1,8 +1,24 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<PersonResponse>
+@{
+    ViewData["Title"] = "Persons";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>Persons</h1>
+
+<table>
+    @foreach(var output in Model)
+    {
+        <tr>
+            <td>@output.Name</td>
+            <td>@output.Gender</td>
+            <td>@output.Address</td>
+            <td>@output.DateOfBirth?.ToString("dd MMM yyyy")</td>
+            <td>@output.Email</td>
+            <td>@output.CountryName</td>
+            <td>@output.Age</td>
+            <td>@output.ReceiveNewsLetter</td>
+            <td></td>
+        </tr>
+    }
+</table>
+    

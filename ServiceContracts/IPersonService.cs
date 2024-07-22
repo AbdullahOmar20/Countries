@@ -39,5 +39,8 @@ namespace ServiceContracts
         /// <param name="sortorder">the sort order</param>
         /// <returns></returns>
         List<PersonResponse> GetSortedPersons(List<PersonResponse> allpersons, string sortby, SortOrderOption sortorder);
+
+        PersonResponse UpdatePerson (PersonUpdateRequest? personUpdaterequest);
+        bool DeletePerson(Guid? PersonId);
     }
 }

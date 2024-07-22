@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\ProjectTest\\ProjectTest.csproj": {}
+    "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ProjectTest\\ProjectTest.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Countries\\Countries.csproj": {
+    "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Countries\\Countries.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Countries\\Countries.csproj",
+        "projectUniqueName": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Countries\\Countries.csproj",
         "projectName": "Countries",
-        "projectPath": "C:\\Projects\\Countries\\Countries.csproj",
+        "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Countries\\Countries.csproj",
         "packagesPath": "C:\\Users\\Abdullah\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Countries\\obj\\",
+        "outputPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Countries\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Abdullah\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,7 +27,17 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Entites\\Entites.csproj": {
+                "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Entites\\Entites.csproj"
+              },
+              "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ServiceContracts\\ServiceContracts.csproj": {
+                "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ServiceContracts\\ServiceContracts.csproj"
+              },
+              "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Services\\Services.csproj": {
+                "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Services\\Services.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -39,6 +49,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -62,14 +88,14 @@
         }
       }
     },
-    "C:\\Projects\\Entites\\Entites.csproj": {
+    "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Entites\\Entites.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Entites\\Entites.csproj",
+        "projectUniqueName": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Entites\\Entites.csproj",
         "projectName": "Entites",
-        "projectPath": "C:\\Projects\\Entites\\Entites.csproj",
+        "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Entites\\Entites.csproj",
         "packagesPath": "C:\\Users\\Abdullah\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Entites\\obj\\",
+        "outputPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Entites\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Abdullah\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -97,6 +123,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -113,18 +155,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projects\\ProjectTest\\ProjectTest.csproj": {
+    "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ProjectTest\\ProjectTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\ProjectTest\\ProjectTest.csproj",
+        "projectUniqueName": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ProjectTest\\ProjectTest.csproj",
         "projectName": "ProjectTest",
-        "projectPath": "C:\\Projects\\ProjectTest\\ProjectTest.csproj",
+        "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ProjectTest\\ProjectTest.csproj",
         "packagesPath": "C:\\Users\\Abdullah\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\ProjectTest\\obj\\",
+        "outputPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ProjectTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Abdullah\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -141,17 +183,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Projects\\Countries\\Countries.csproj": {
-                "projectPath": "C:\\Projects\\Countries\\Countries.csproj"
+              "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Countries\\Countries.csproj": {
+                "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Countries\\Countries.csproj"
               },
-              "C:\\Projects\\Entites\\Entites.csproj": {
-                "projectPath": "C:\\Projects\\Entites\\Entites.csproj"
+              "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Entites\\Entites.csproj": {
+                "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Entites\\Entites.csproj"
               },
-              "C:\\Projects\\ServiceContracts\\ServiceContracts.csproj": {
-                "projectPath": "C:\\Projects\\ServiceContracts\\ServiceContracts.csproj"
+              "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ServiceContracts\\ServiceContracts.csproj": {
+                "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ServiceContracts\\ServiceContracts.csproj"
               },
-              "C:\\Projects\\Services\\Services.csproj": {
-                "projectPath": "C:\\Projects\\Services\\Services.csproj"
+              "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Services\\Services.csproj": {
+                "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Services\\Services.csproj"
               }
             }
           }
@@ -203,18 +245,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projects\\ServiceContracts\\ServiceContracts.csproj": {
+    "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ServiceContracts\\ServiceContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\ServiceContracts\\ServiceContracts.csproj",
+        "projectUniqueName": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ServiceContracts\\ServiceContracts.csproj",
         "projectName": "ServiceContracts",
-        "projectPath": "C:\\Projects\\ServiceContracts\\ServiceContracts.csproj",
+        "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ServiceContracts\\ServiceContracts.csproj",
         "packagesPath": "C:\\Users\\Abdullah\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\ServiceContracts\\obj\\",
+        "outputPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ServiceContracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Abdullah\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -231,8 +273,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Projects\\Entites\\Entites.csproj": {
-                "projectPath": "C:\\Projects\\Entites\\Entites.csproj"
+              "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Entites\\Entites.csproj": {
+                "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Entites\\Entites.csproj"
               }
             }
           }
@@ -266,14 +308,14 @@
         }
       }
     },
-    "C:\\Projects\\Services\\Services.csproj": {
+    "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Services\\Services.csproj",
+        "projectUniqueName": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Projects\\Services\\Services.csproj",
+        "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\Abdullah\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Services\\obj\\",
+        "outputPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Abdullah\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -290,8 +332,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Projects\\ServiceContracts\\ServiceContracts.csproj": {
-                "projectPath": "C:\\Projects\\ServiceContracts\\ServiceContracts.csproj"
+              "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ServiceContracts\\ServiceContracts.csproj": {
+                "projectPath": "D:\\programming\\Rev_Projs\\Proj1\\Countries\\ServiceContracts\\ServiceContracts.csproj"
               }
             }
           }
@@ -321,7 +363,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

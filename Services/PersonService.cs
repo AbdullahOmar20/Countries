@@ -13,12 +13,12 @@ namespace Services
 {
     public class PersonService : IPersonService
     {
-        private readonly List<Person> _person;
+        private readonly CountriesDbContext _context;
         private readonly ICountryService _countryService;
-        public PersonService()
+        public PersonService(CountriesDbContext context, ICountryService countryService)
         {
-            _person = new List<Person>();
-            _countryService = new CountryService();
+            _context = context;
+            _countryService = countryService;
         }
         //converting from person type to PersonResponse type 
         //from the data store to data access
@@ -29,6 +29,16 @@ namespace Services
             personResponse.CountryName = _countryService.GetCountryById(person.CountryId)?.CountryName;
             return personResponse;
         }
+        private bool saving()
+        {
+            try{
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {return false;}
+
+            return true;
+        }
         public PersonResponse AddPerson(PersonAddRequest? personAddrequest)
         {
 
@@ -36,25 +46,27 @@ namespace Services
             if(personAddrequest == null)
                 throw new ArgumentNullException(nameof(personAddrequest));
             //Model Validation
-            ValidationHelper.ModelValidation(personAddrequest);
+            //ValidationHelper.ModelValidation(personAddrequest);
 
             Person person = personAddrequest.ToPerson();
             //assigning a Guid to person id 
             person.Id = Guid.NewGuid();
-            _person.Add(person);
+            _context.Persons.Add(person);
+            _context.SaveChangesAsync();
+            //saving();
             //return an object of PersonResponse type
             return ConvertPersonToResponse(person);
         }
 
         public List<PersonResponse> GetAllPersons()
         {
-            return _person.Select(p=>p.ToPersonResponse()).ToList();
+            return _context.Persons.ToList().Select(p=>p.ToPersonResponse()).ToList();
         }
 
         public PersonResponse? GetPersonById(Guid? id)
         {
             if (id == null) return null;
-            Person? person = _person.FirstOrDefault(p=>p.Id == id);
+            Person? person = _context.Persons.FirstOrDefault(p=>p.Id == id);
             if (person == null) return null;
             return person.ToPersonResponse();
         }
@@ -100,6 +112,51 @@ namespace Services
                 _ => allpersons
             } ;
             return SortedPersons;
+        }
+
+        public PersonResponse UpdatePerson(PersonUpdateRequest? personUpdateRequest)
+        {
+             if (personUpdateRequest == null)
+            throw new ArgumentNullException(nameof(Person));
+
+            //validation
+            ValidationHelper.ModelValidation(personUpdateRequest);
+
+            //get matching person object to update
+            Person? matchingPerson = _context.Persons.FirstOrDefault(temp => temp.Id == personUpdateRequest.Id);
+            if (matchingPerson == null)
+            {
+                throw new ArgumentException("Given person id doesn't exist");
+            }
+
+            //update all details
+            matchingPerson.Name = personUpdateRequest.Name;
+            matchingPerson.Email = personUpdateRequest.Email;
+            matchingPerson.DateOfBirth = personUpdateRequest.DateOfBirth;
+            matchingPerson.Gender = personUpdateRequest.Gender.ToString();
+            matchingPerson.CountryId = personUpdateRequest.CountryId;
+            matchingPerson.Address = personUpdateRequest.Address;
+            matchingPerson.ReceiveNewsLetter = personUpdateRequest.ReceiveNewsLetter;
+            _context.Persons.Update(matchingPerson);
+            saving();
+            return matchingPerson.ToPersonResponse();
+        }
+
+        public bool DeletePerson(Guid? PersonId)
+        {
+            if (PersonId == null)
+            {
+                throw new ArgumentNullException(nameof(PersonId));
+            }
+
+            Person? person = _context.Persons.FirstOrDefault(temp => temp.Id == PersonId);
+            if (person == null)
+                return false;
+
+            _context.Persons.Remove(person);
+            saving();
+
+            return true;
         }
     }
 }

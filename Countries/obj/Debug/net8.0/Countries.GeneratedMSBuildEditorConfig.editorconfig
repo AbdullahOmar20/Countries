@@ -9,39 +9,43 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Countries
 build_property.RootNamespace = Countries
-build_property.ProjectDir = C:\Projects\Countries\
+build_property.ProjectDir = D:\programming\Rev_Projs\Proj1\Countries\Countries\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Projects\Countries
+build_property.MSBuildProjectDirectory = D:\programming\Rev_Projs\Proj1\Countries\Countries
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Projects/Countries/Views/Home/Index.cshtml]
+[D:/programming/Rev_Projs/Proj1/Countries/Countries/Views/Home/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/programming/Rev_Projs/Proj1/Countries/Countries/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Countries/Views/Home/Privacy.cshtml]
+[D:/programming/Rev_Projs/Proj1/Countries/Countries/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Countries/Views/Shared/Error.cshtml]
+[D:/programming/Rev_Projs/Proj1/Countries/Countries/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Countries/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/programming/Rev_Projs/Proj1/Countries/Countries/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Countries/Views/_ViewImports.cshtml]
+[D:/programming/Rev_Projs/Proj1/Countries/Countries/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Countries/Views/_ViewStart.cshtml]
+[D:/programming/Rev_Projs/Proj1/Countries/Countries/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/Countries/Views/Shared/_Layout.cshtml]
+[D:/programming/Rev_Projs/Proj1/Countries/Countries/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7zcbvxep1t
